@@ -8,6 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^7.2.9"
+    "astro": "^7.2.9",
+    "astro-github": "^0.0.2"
   }
 }
