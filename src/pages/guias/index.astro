@@ -2,8 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 const guias = (await getCollection('contenido')).filter((entry) => entry.id.startsWith('guias/'));
+const base = import.meta.env.BASE_URL;
 ---
 <Base title="Guías · Curiosity Vault">
   <h1>Guías</h1><p class="lede">Cada guía conserva sus apuntes de partida y diferencia con claridad el aporte editorial.</p>
-  <section class="grid">{guias.map((entry) => <a class="card" href={`/guias/${entry.id.replace('guias/', '')}`}><strong>{entry.id.replace('guias/', '').replaceAll('-', ' ')}</strong><br /><span>Leer guía</span></a>)}</section>
+  <section class="grid">{guias.map((entry) => <a class="card" href={`${base}${entry.id.replace('guias/', '')}/`}><strong>{entry.id.replace('guias/', '').replaceAll('-', ' ')}</strong><br /><span>Leer guía</span></a>)}</section>
 </Base>

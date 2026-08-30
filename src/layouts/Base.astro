@@ -1,5 +1,6 @@
 ---
 const { title = 'Curiosity Vault' } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="es">
@@ -11,15 +12,15 @@ const { title = 'Curiosity Vault' } = Astro.props;
   </head>
   <body>
     <header>
-      <a class="brand" href="/">Curiosity Vault</a>
+      <a class="brand" href={base}>Curiosity Vault</a>
       <nav aria-label="Navegación principal">
-        <a href="/guias">Guías</a>
-        <a href="/colecciones/libros">Libros</a>
-        <a href="/colecciones/peliculas">Películas</a>
+        <a href={`${base}guias/`}>Guías</a>
+        <a href={`${base}libros/`}>Libros</a>
+        <a href={`${base}peliculas/`}>Películas</a>
       </nav>
     </header>
     <main><slot /></main>
-    <footer>Conocimiento en construcción · <a href="/LICENSE.md">CC BY 4.0</a></footer>
+    <footer>Conocimiento en construcción · <a href={`${base}LICENSE.md`}>CC BY 4.0</a></footer>
   </body>
 </html>
 

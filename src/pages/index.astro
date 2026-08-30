@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 const entries = await getCollection('contenido');
 const guias = entries.filter((entry) => entry.id.startsWith('guias/'));
+const base = import.meta.env.BASE_URL;
 ---
 <Base>
   <p>Biblioteca abierta</p>
@@ -10,6 +11,6 @@ const guias = entries.filter((entry) => entry.id.startsWith('guias/'));
   <p class="lede">Guías creadas desde apuntes personales, con edición transparente, investigación cuando aporta valor y espacio para seguir aprendiendo.</p>
   <h2>Explora las guías</h2>
   <section class="grid">
-    {guias.map((entry) => <a class="card" href={`/guias/${entry.id.replace('guias/', '')}`}><strong>{entry.id.replace('guias/', '').replaceAll('-', ' ')}</strong><br /><span>Guía comunitaria</span></a>)}
+    {guias.map((entry) => <a class="card" href={`${base}${entry.id.replace('guias/', '')}/`}><strong>{entry.id.replace('guias/', '').replaceAll('-', ' ')}</strong><br /><span>Guía comunitaria</span></a>)}
   </section>
 </Base>
