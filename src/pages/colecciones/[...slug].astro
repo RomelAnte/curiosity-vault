@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('contenido');
+  return entries
+    .filter((entry) => entry.id.startsWith('colecciones/'))
+    .map((entry) => ({ params: { slug: entry.id.replace('colecciones/', '') }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const title = entry.id.replace('colecciones/', '').replaceAll('-', ' ');
+---
+<Base title={`${title} · Curiosity Vault`}>
+  <article><Content /></article>
+</Base>
