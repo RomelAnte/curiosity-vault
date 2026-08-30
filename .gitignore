@@ -1,0 +1,11 @@
+# Apuntes fuente privados: permanecen locales y no se publican en Git.
+*.txt
+
+# Copias de recuperación locales.
+backup_before_rollback/
+*.bak
+
+# Dependencias y archivos generados por Astro.
+node_modules/
+dist/
+.astro/
