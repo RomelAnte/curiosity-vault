@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://curiosity-vault.example',
+  site: 'https://RomelAnte.github.io',
+  base: '/curiosity-vault',
 });
