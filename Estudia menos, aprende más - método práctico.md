@@ -1,4 +1,4 @@
-# Método para estudiar
+Método para estudiar
 
 **Descripción:**
 Pasos prácticos para aprender eficientemente: enfoque en un tema, lectura profunda, explicar a otros y revisión activa.
@@ -19,7 +19,6 @@ Ofrece un método simple y repetible para consolidar conocimientos y mejorar la 
 ---
 
 ## Puntos clave
-
 - Focalizar en un tema específico y leer en detalle.
 - Explicar el contenido a otra persona para solidificar comprensión.
 - Relectura y práctica; hábitos que ayudan (hidratarse, paseos, rodearse de gente que aporta).

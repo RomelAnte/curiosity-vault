@@ -1,4 +1,4 @@
-# Técnicas para aprender inglés u otro idioma
+Técnicas para aprender inglés u otro idioma
 
 **Descripción:**
 Lista de técnicas prácticas para aprender idiomas: exposición diaria, repetición espaciada (Anki), práctica de las 4 destrezas y uso de contenido que te guste.
@@ -19,10 +19,8 @@ Ofrece un enfoque equilibrado entre práctica diaria, recursos recomendados y t�
 ---
 
 ## Puntos clave
-
 - Divide el estudio: 20 min escucha, 20 min lectura, 10 min escritura, 10 min speaking.
 - Usa Anki y repetición espaciada; prioriza puntos débiles.
 - Aprende con contenido que te gusta (podcasts, mini historias, canales de YouTube recomendados).
 - No traducir; buscar input comprensible y narrar tu día en el idioma objetivo.
 - Certificaciones sugeridas: EF SET, saylor.org.
-  - usar anki

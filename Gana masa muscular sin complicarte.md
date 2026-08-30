@@ -1,4 +1,4 @@
-# Ganar masa muscular
+Ganar masa muscular
 
 **Descripción:**
 Pautas básicas para ganar masa muscular: sueño, ingesta proteica y entrenamiento regular, más ejemplos de ejercicios y calentamiento.
@@ -19,7 +19,6 @@ Sintetiza recomendaciones prácticas y sencillas para principiantes que quieren 
 ---
 
 ## Puntos clave
-
 - Dormir 6–8 horas y consumir proteína (~108 g según nota) según objetivos.
 - Entrenar 3–5 veces por semana alternando tren superior e inferior, sesiones de ~45 min.
 - Ejemplo: calentamiento (rotaciones), ejercicios compuestos y variaciones.

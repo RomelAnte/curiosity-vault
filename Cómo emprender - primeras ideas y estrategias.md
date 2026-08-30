@@ -1,8 +1,8 @@
-## Como emprender
+Cómo emprender
 - Idea
     - porque(proposito)
     - como(proceso)
-    - que(resultado)
+    - queresultado
 - Planeacion
     - CANVAS
 - Identificar tu publico
@@ -20,7 +20,6 @@
     - Di adios a lo negativo
     - obsecionate con tu mejor version
     - como ser mas productivo y utilizar mejor el tiempo
-    - 
 
 
 
@@ -56,5 +55,4 @@ Aquí tienes las 9 ideas para generar valor y salir del desempleo:  1. Vender pa
 + valore
 + metas
 + formar como empresario
-+ aprneder sobre marca
-
++ aprnender sobre marca

@@ -1,4 +1,4 @@
-# Conceptualizar un proyecto
+Conceptualizar un proyecto
 
 **Descripción:**
 Guía para conceptualizar un proyecto usando el ciclo construir-medir-aprender (lean startup) y una estructura de documento de proyecto (descripción, alcance, interesados, cronograma, roles, funcionalidades y riesgos).
@@ -19,7 +19,6 @@ Ofrece una checklist práctica para pasar de idea a MVP y recoger feedback inici
 ---
 
 ## Estructura sugerida para el documento del proyecto
-
 - Descripción: nombre, objetivo, propósito, fechas.
 - Alcance: tecnologías, límites del producto.
 - Partes interesadas: cliente, proveedores, usuarios, equipo.

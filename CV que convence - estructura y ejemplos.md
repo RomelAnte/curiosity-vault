@@ -1,4 +1,4 @@
-# CV
+CV
 
 **Descripción:**
 Consejos para crear un currículum claro y efectivo: enfocar en logros cuantificables, usar palabras clave y adaptar el perfil al área.
@@ -19,10 +19,8 @@ Resume errores comunes y buenas prácticas que mejoran las posibilidades en proc
 ---
 
 ## Puntos clave
-
 - No inflar el curriculum; usar lenguaje técnico pero honesto.
 - Incluir palabras clave relacionadas con la vacante bajo el nombre.
 - Perfil profesional: título, área, especialización y conocimiento técnico.
 - Experiencia: logros con números, cargo, empresa, periodo y verbos de acción.
 - Evitar secciones irrelevantes, información personal excesiva y objetivos genéricos.
-- tareas

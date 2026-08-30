@@ -1,4 +1,4 @@
-# Dejar de procrastinar
+Dejar de procrastinar
 
 **Descripción:**
 Técnicas prácticas para reducir la procrastinación: mejorar el entorno, usar listas y temporizadores, crear micro-hábitos y eliminar distracciones.
@@ -19,7 +19,6 @@ Ofrece pasos concretos y fáciles de implementar para empezar a actuar hoy mismo
 ---
 
 ## Puntos clave
-
 - Limpiar y simplificar el espacio de trabajo.
 - Evitar el celular y cerrar pestañas irrelevantes.
 - Usar lista de tareas y temporizador (Pomodoro/intervalos).

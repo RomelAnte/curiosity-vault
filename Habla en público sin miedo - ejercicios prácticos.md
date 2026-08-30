@@ -1,4 +1,4 @@
-# Técnicas de hablar en público
+Técnicas de hablar en público
 
 **Descripción:**
 Prácticas y ejercicios para mejorar la oratoria: vocalización, respiración, ritmo, lenguaje corporal y estrategias para vencer la timidez.
@@ -19,7 +19,6 @@ Incluye ejercicios concretos (trabalenguas, relajación, fortalecer diafragma) y
 ---
 
 ## Puntos clave
-
 - Ejercicios: trabalenguas con lápiz, relajación de mandíbula, fortalecer diafragma, pausas y vocalización.
 - Enfrentar la timidez: saludar a desconocidos, iniciar pequeñas conversaciones y aceptar el desapego al resultado.
 - Lenguaje corporal: gestos controlados, contacto visual y micro-señales como levantar la ceja.

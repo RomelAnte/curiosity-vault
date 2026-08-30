@@ -1,4 +1,4 @@
-# Películas
+Películas
 
 **Descripción:**
 Lista de películas recomendadas, desde dramas hasta thrillers y biografías.
@@ -19,7 +19,6 @@ Selección variada que incluye relatos de crimen, biografías y películas inspi
 ---
 
 ## Lista
-
 - Hacker: "Todo el crimen tiene un inicio"
 - Sin límites
 - Discurso del rey
