@@ -19,6 +19,7 @@ Mezcla consejos prácticos sobre presentación (CV, entrevistas) con una lista d
 ---
 
 ## Puntos clave
+
 - Alinear el CV con la vacante y mostrar logros cuantificables.
 - Preparación para entrevistas: comunicación asertiva, inteligencia emocional y técnica de rompimiento de hielo.
 - Uso de LinkedIn para búsquedas: filtrar por palabras clave como "Hiring" o el puesto deseado.

@@ -19,6 +19,7 @@ Compila pasos prácticos (levantar temprano, eliminar vicios, rodearse de person
 ---
 
 ## Puntos clave
+
 - Cortar la procrastinación, duda y pereza.
 - Trabajar por objetivos claros; practicar disciplina diaria.
 - Inspiración en estoicismo y modelos de éxito; exposición gradual para vencer miedos.

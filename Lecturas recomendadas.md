@@ -19,11 +19,13 @@ Compila títulos técnicos y de crecimiento personal que sirven como referencia 
 ---
 
 ## Listado destacado (selección)
+
 - Programación y software: "El programador pragmático", "Clean Code", "Arquitectura limpia", "Cracking the coding interview".
 - Desarrollo personal: "Los 7 hábitos de la gente altamente efectiva", "El poder de los hábitos", "Cómo ganar amigos e influir sobre las personas".
 - Literatura & otros: "Huásipungo", "Una breve historia de casi todo", "Sapiens".
 
 ## Temas de investigación
+
 - Alquimia y piedra filosofal
 - Pompeya y arqueología
 - Efectos de la meditación en el cerebro

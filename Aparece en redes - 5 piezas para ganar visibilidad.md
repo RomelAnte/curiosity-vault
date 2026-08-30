@@ -19,6 +19,7 @@ Entrega un marco simple y accionable para planificar contenido que atraiga, expl
 ---
 
 ## Puntos clave (resumen rápido)
+
 - Pedir una campaña: definir producto, cliente, problema y beneficio.
 - 5 piezas conectadas: reel (atención), carrusel (explicar), historia (recordar), WhatsApp (vender), correo (cerrar).
 - Estrategia: videos ~1 min, tocar un dolor, aportar valor, usar memes del nicho.

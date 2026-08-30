@@ -19,6 +19,7 @@ Ofrece un enfoque equilibrado entre práctica diaria, recursos recomendados y t�
 ---
 
 ## Puntos clave
+
 - Divide el estudio: 20 min escucha, 20 min lectura, 10 min escritura, 10 min speaking.
 - Usa Anki y repetición espaciada; prioriza puntos débiles.
 - Aprende con contenido que te gusta (podcasts, mini historias, canales de YouTube recomendados).

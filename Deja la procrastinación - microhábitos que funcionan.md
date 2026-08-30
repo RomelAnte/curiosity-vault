@@ -19,6 +19,7 @@ Ofrece pasos concretos y fáciles de implementar para empezar a actuar hoy mismo
 ---
 
 ## Puntos clave
+
 - Limpiar y simplificar el espacio de trabajo.
 - Evitar el celular y cerrar pestañas irrelevantes.
 - Usar lista de tareas y temporizador (Pomodoro/intervalos).

@@ -19,6 +19,7 @@ Resume errores comunes y buenas prácticas que mejoran las posibilidades en proc
 ---
 
 ## Puntos clave
+
 - No inflar el curriculum; usar lenguaje técnico pero honesto.
 - Incluir palabras clave relacionadas con la vacante bajo el nombre.
 - Perfil profesional: título, área, especialización y conocimiento técnico.

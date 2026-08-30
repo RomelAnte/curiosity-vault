@@ -19,6 +19,7 @@ Ofrece una checklist práctica para pasar de idea a MVP y recoger feedback inici
 ---
 
 ## Estructura sugerida para el documento del proyecto
+
 - Descripción: nombre, objetivo, propósito, fechas.
 - Alcance: tecnologías, límites del producto.
 - Partes interesadas: cliente, proveedores, usuarios, equipo.
