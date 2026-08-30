@@ -1,0 +1,38 @@
+##Conceptualizar un proyecto
+método line statup
+- construir
+- medir
+- aprender	
+	- necesidad
+	- crear un mvp
+	- conseguir potenciales clientes
+	- recibir un feetback
+	- iterar y mejorar
+
+arrancar un proyecto(documento)
+- descripción
+	- nombre
+	- objetivo
+	- propósito
+	- fechas
+- Alcance
+	- Tecnologias
+- Partes interesada
+	- cliente
+	- proveedores
+	- usuario
+	- equipo de desarrollo
+- cronograma
+	- reuniones
+	- sprint
+- roles
+	- equipo de desarrollo
+	- roll
+- pagians del proyecto
+- enrutamiento(como se enlazan entre las paginas)
+- funcionalidades
+- especificacion de la function
+- riesgos y mitigacion
+
+## como profecional
+- facturas a credito

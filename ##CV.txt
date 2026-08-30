@@ -1,0 +1,33 @@
+##CV
+
+- no inflar el curriculum
+- Saber decirlo con un lenguaje tecnico y algo maquillado
+- palabras claves de la vacante
+- logros cuanticos
+- Perfil profecional
+    - palabras claves bajo del nombre de acuerdo a la vacante
+    - titulo profecional
+    - area
+    - especializacon
+    - conocimiento(area/herramientas)
+- habilidades importantes o que aporten valor
+    - software
+    - idiomas
+    - herramientas en el area especificado
+- experiencia laboral:
+    - logros, numeros, porcentaje, resultado
+    - cargo
+    - empresa
+    - periodo
+    - verbos en accion
+    - palabras claves
+- nombre de las secciones
+- un curriculum por area, no por vacante
+
+
+## eRRRORES
+- Objetivo perosnal
+- no tener competencias(herramientas)
+- informacion muy personal
+- habilidades interminable
+- tareas
