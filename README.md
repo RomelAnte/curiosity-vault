@@ -1,6 +1,25 @@
 # Curiosity Vault
 
-Una biblioteca abierta de guías, ideas y colecciones para aprender, construir proyectos y compartir conocimiento útil.
+![Vista previa de Curiosity Vault](./docs/preview.png)
+
+> Aprender no debería quedarse perdido entre notas, videos guardados y pestañas abiertas.
+
+Curiosity Vault convierte curiosidad en conocimiento útil y compartible:
+apuntes reales, guías claras, fuentes transparentes y espacio para que más
+personas aporten lo que están aprendiendo.
+
+## ¿Para qué existe?
+
+Para construir una biblioteca comunitaria en español sobre aprendizaje,
+empleabilidad, proyectos, hábitos y cultura. No buscamos consejos mágicos:
+queremos ideas que puedas entender, cuestionar y poner a prueba.
+
+## Tu experiencia también puede ayudar
+
+¿Encontraste una técnica que te funcionó? ¿Tienes una fuente mejor? ¿Puedes
+corregir, traducir o mejorar una guía?
+
+[Explora cómo contribuir](CONTRIBUTING.md) · [Lee las guías](contenido/) · [Propón una idea](../../issues/new)
 
 ## Contenido publicado
 
