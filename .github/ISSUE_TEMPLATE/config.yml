@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Preguntas generales
+    url: https://github.com/RomelAnte/curiosity-vault/discussions
+    about: Si tienes una duda que no encaja en las plantillas, ábrela como discusión.
