@@ -2,6 +2,15 @@
 
 La idea de partir el estudio en bloques cortos es útil porque obliga a practicar varias habilidades, no solo vocabulario. Este plan nace de una nota personal y se adapta a tu nivel y disponibilidad.
 
+## Apuntes de partida
+
+- Aprender con cosas que te gustan: minihistorias en inglés, *Learn English With...* y *Easy English*; volver a escucharlas después de varios días.
+- Dictar a una IA o editor de texto; usar Nonsense App; practicar constantemente; leer en voz alta y dividir oraciones en partes pequeñas.
+- Trabajar en secciones pequeñas: gramática y vocabulario (Anki), escucha (series en inglés) y conversación (Stimuler).
+- Escuchar *Big Questions* y tomar apuntes.
+- Explorar Soy Miguel Idiomas, La Teacher Tiffany, FreeCodeCamp, Inglés de Cambridge, inglés técnico de Cisco y Desafío Latam.
+- Certificación: EF SET.
+
 ## Una hora posible
 
 - 20 minutos de escucha con audio o video comprensible.

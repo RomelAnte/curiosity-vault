@@ -10,6 +10,11 @@ Una biblioteca abierta de guías, ideas y colecciones para aprender, construir p
 - [CV y empleabilidad: demuestra tu valor](contenido/guias/cv-y-empleabilidad.md)
 - [De idea a MVP: construir para aprender](contenido/guias/de-idea-a-mvp.md)
 - [Ganar masa muscular con criterio](contenido/guias/ganar-masa-muscular-con-criterio.md)
+- [Método para estudiar: de apuntes a práctica](contenido/guias/metodo-para-estudiar.md)
+- [Visibilidad en redes](contenido/guias/visibilidad-en-redes.md)
+- [Dejar la procrastinación](contenido/guias/dejar-la-procrastinacion.md)
+- [Hábitos y miedos](contenido/guias/habitos-y-miedos.md)
+- [Hablar en público](contenido/guias/hablar-en-publico.md)
 
 ### Colecciones
 

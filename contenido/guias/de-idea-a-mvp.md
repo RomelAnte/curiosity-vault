@@ -2,6 +2,15 @@
 
 Una idea no necesita estar terminada para ponerse a prueba. Un MVP sirve para aprender con personas reales antes de invertir demasiado tiempo o dinero.
 
+## Apuntes de partida
+
+- Método Lean Startup: construir, medir y aprender.
+- Identificar una necesidad, crear un MVP, conseguir potenciales clientes, recibir *feedback*, iterar y mejorar.
+- Documento de proyecto: descripción (nombre, objetivo, propósito y fechas), alcance y tecnologías.
+- Partes interesadas: cliente, proveedores, usuario y equipo de desarrollo.
+- Cronograma con reuniones y *sprints*; roles del equipo; páginas, enrutamiento, funcionalidades, especificación de funciones, riesgos y mitigación.
+- Como profesional: facturas a crédito.
+
 ## El ciclo
 
 1. **Construir:** crea la versión más pequeña que permita comprobar una suposición importante.

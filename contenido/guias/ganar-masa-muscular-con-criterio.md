@@ -2,6 +2,12 @@
 
 La nota original propone tres bases útiles: entrenar de forma regular, comer suficiente proteína y dormir. La clave es convertirlas en un plan sostenible y ajustado a la persona, no seguir una cifra fija sin contexto.
 
+## Apuntes de partida
+
+- Dormir de 6 a 8 horas.
+- Comer 107,8 g de proteína.
+- Entrenar de 3 a 5 veces por semana, alternando tren superior e inferior, durante 45 minutos.
+
 ## Bases prácticas
 
 - Realiza entrenamiento de fuerza con una frecuencia que puedas sostener y aumenta la dificultad de forma progresiva.

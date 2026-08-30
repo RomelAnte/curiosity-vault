@@ -2,6 +2,25 @@
 
 Un CV no debe inflar tu experiencia: debe hacer visible lo que sabes hacer y el impacto que ya has tenido.
 
+## Apuntes de partida
+
+### CV
+
+- No inflar el currículum; usar lenguaje técnico sin perder honestidad.
+- Usar palabras clave de la vacante y logros cuantificables.
+- Perfil profesional: palabras clave bajo el nombre, título, área, especialización y conocimientos.
+- Incluir software, idiomas y herramientas que aporten valor.
+- Experiencia: logros, números, porcentajes, resultados, cargo, empresa, periodo, verbos de acción y palabras clave.
+- Evitar objetivos personales, falta de competencias, información muy personal, listas interminables de habilidades y limitarse a tareas.
+- Crear un currículum por área, no necesariamente por cada vacante.
+
+### Empleabilidad
+
+- Revisar que el CV esté acorde a la vacante y prepararse para ella.
+- Mostrar energía en la entrevista sin dar una imagen de desesperación.
+- Buscar en LinkedIn con términos como “buscamos”, “estamos buscando” o “nos encontramos”, junto con puesto y lugar.
+- Aprender a comunicar y a escuchar.
+
 ## Construye un CV claro
 
 - Adapta el título, el perfil y las palabras clave al tipo de puesto.
