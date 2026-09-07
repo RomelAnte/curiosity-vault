@@ -1,3 +1,13 @@
+---
+title: "De idea a MVP: construir para aprender"
+description: "Cómo validar hipótesis, estructurar un producto mínimo viable y aplicar los principios de Lean Startup sin malgastar recursos."
+category: "Proyectos"
+tags: ["MVP", "Lean Startup", "Emprendimiento", "Proyectos"]
+icon: "🚀"
+updatedAt: "2026-09-07"
+featured: true
+---
+
 # De idea a MVP: construir para aprender
 
 Una idea no necesita estar terminada para ponerse a prueba. Un MVP sirve para aprender con personas reales antes de invertir demasiado tiempo o dinero.

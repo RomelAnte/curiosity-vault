@@ -1,0 +1,205 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<header class="site-header">
+  <div class="header-container">
+    <a class="brand" href={base}>
+      <span class="brand-logo">💡</span>
+      <span class="brand-name">Curiosity Vault</span>
+      <span class="brand-badge">v2.0</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href={`${base}/guias/`} class="nav-link">Guías</a>
+      <a href={`${base}/colecciones/`} class="nav-link">Colecciones</a>
+      <a href="https://github.com/RomelAnte/curiosity-vault" target="_blank" rel="noopener noreferrer" class="nav-link external">
+        Contribuir
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="open-search-btn" class="search-trigger" aria-label="Buscar en la biblioteca">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span class="search-label">Buscar...</span>
+        <kbd class="search-kbd">⌘K</kbd>
+      </button>
+
+      <ThemeToggle />
+
+      <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú">
+        <svg class="hamburger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <nav aria-label="Navegación móvil">
+      <a href={`${base}/guias/`}>Guías</a>
+      <a href={`${base}/colecciones/`}>Colecciones</a>
+      <a href="https://github.com/RomelAnte/curiosity-vault" target="_blank" rel="noopener noreferrer">Contribuir en GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  .header-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .brand-logo {
+    font-size: 1.25rem;
+  }
+  .brand-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.15rem 0.4rem;
+    border-radius: 1rem;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+  }
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 5rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.2s ease;
+  }
+  .nav-link:hover {
+    color: var(--color-emerald-light);
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .search-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .search-trigger:hover {
+    background: var(--bg-hover);
+    border-color: var(--color-emerald-light);
+    color: var(--text-primary);
+  }
+  .search-kbd {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.35rem;
+    color: var(--text-muted);
+  }
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  .mobile-menu {
+    display: none;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+  }
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+    .search-label, .search-kbd {
+      display: none;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+    .mobile-menu.open {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function initHeader() {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script>

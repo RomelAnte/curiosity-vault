@@ -1,3 +1,13 @@
+---
+title: "Libros para explorar"
+description: "Una biblioteca comunitaria sobre programación, literatura ecuatoriana, hábitos, desarrollo personal y mentalidad."
+category: "Colecciones"
+tags: ["Libros", "Lectura", "Colección", "Biblioteca"]
+icon: "📖"
+updatedAt: "2026-09-07"
+featured: true
+---
+
 # Libros para explorar
 
 Una biblioteca personal en crecimiento. No es un ranking: es una lista para elegir según lo que quieras aprender o sentir.

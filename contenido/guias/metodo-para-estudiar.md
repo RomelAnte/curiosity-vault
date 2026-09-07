@@ -1,3 +1,13 @@
+---
+title: "Método para estudiar: de apuntes a práctica"
+description: "Pasa de la relectura pasiva al recuerdo activo, la autoexplicación y la práctica distribuida respaldada por la psicología educativa."
+category: "Aprendizaje"
+tags: ["Estudio", "Aprendizaje", "Productividad", "Memoria"]
+icon: "📚"
+updatedAt: "2026-09-07"
+featured: true
+---
+
 # Método para estudiar: de apuntes a práctica
 
 Esta guía parte íntegramente de la nota local **“## Método para estudiar.txt”**. La primera sección conserva todas sus ideas; la segunda añade contexto editorial y evidencia, sin sustituirlas.

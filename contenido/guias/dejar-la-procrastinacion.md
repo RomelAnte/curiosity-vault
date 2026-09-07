@@ -1,8 +1,19 @@
+---
+title: "Dejar la procrastinación: microacciones y foco"
+description: "Estrategias prácticas para simplificar tu entorno, crear microhábitos de menos de 5 minutos y vencer la parálisis de inicio."
+category: "Productividad"
+tags: ["Productividad", "Hábitos", "Enfoque", "Procrastinación"]
+icon: "⚡"
+updatedAt: "2026-09-07"
+featured: false
+---
+
 # Dejar la procrastinación
 
 ## Apuntes de partida
 
-- Limpiar el espacio, tomar agua, alejar el celular, usar una lista de tareas y un temporizador, y cerrar pestañas.
+- Limpiar y mantener perfectamente arreglado tu espacio de trabajo a tal punto de eliminar cualquier objeto que genere distracción visual.
+- Tomar agua, alejar el celular, usar una lista de tareas y un temporizador, y cerrar pestañas innecesarias.
 - Crear una lista de malos hábitos, de cosas que gusta hacer, de hábitos habituales y de hábitos que se quieren construir.
 - Construir dos hábitos en simultáneo y definir una meta con recompensa.
 - Reiniciar: aceptar dónde estás, soltar el pasado, tener claridad de lo que quieres, simplificar el entorno, crear microhábitos y rodearte de energía de crecimiento.

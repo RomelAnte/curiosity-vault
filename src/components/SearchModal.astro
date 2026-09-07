@@ -1,0 +1,239 @@
+---
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('contenido');
+const base = import.meta.env.BASE_URL;
+
+const searchIndex = entries.map((entry) => ({
+  id: entry.id,
+  title: entry.data.title,
+  description: entry.data.description,
+  category: entry.data.category,
+  tags: entry.data.tags || [],
+  icon: entry.data.icon || '💡',
+  url: entry.id.startsWith('guias/') 
+    ? `${base}/${entry.id.replace('guias/', '')}/`
+    : `${base}/${entry.id.replace('colecciones/', '')}/`
+}));
+---
+
+<div id="search-modal" class="search-backdrop" role="dialog" aria-modal="true" aria-label="Buscador global">
+  <div class="search-box">
+    <div class="search-header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Buscar guías, etiquetas o temas..."
+        autocomplete="off"
+      />
+      <kbd class="esc-kbd">ESC</kbd>
+    </div>
+
+    <div id="search-results" class="search-results">
+      <!-- Direct JS injection -->
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ searchIndex }}>
+  window.__SEARCH_INDEX__ = searchIndex;
+</script>
+
+<script>
+  function initSearchModal() {
+    const modal = document.getElementById('search-modal');
+    const input = document.getElementById('search-input') as HTMLInputElement | null;
+    const resultsContainer = document.getElementById('search-results');
+    const openBtn = document.getElementById('open-search-btn');
+
+    if (!modal || !input || !resultsContainer) return;
+
+    const searchData = (window as any).__SEARCH_INDEX__ || [];
+
+    function openModal() {
+      modal?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => input?.focus(), 50);
+      renderResults('');
+    }
+
+    function closeModal() {
+      modal?.classList.remove('open');
+      document.body.style.overflow = '';
+      if (input) input.value = '';
+    }
+
+    function renderResults(query: string) {
+      const q = query.trim().toLowerCase();
+      const filtered = q
+        ? searchData.filter((item: any) =>
+            item.title.toLowerCase().includes(q) ||
+            item.description.toLowerCase().includes(q) ||
+            item.category.toLowerCase().includes(q) ||
+            item.tags.some((t: string) => t.toLowerCase().includes(q))
+          )
+        : searchData.slice(0, 5);
+
+      if (filtered.length === 0) {
+        resultsContainer!.innerHTML = `
+          <div class="no-results">
+            <span>🔍</span>
+            <p>No se encontraron resultados para "${query}"</p>
+          </div>
+        `;
+        return;
+      }
+
+      resultsContainer!.innerHTML = filtered
+        .map(
+          (item: any) => `
+          <a href="${item.url}" class="result-item">
+            <span class="result-icon">${item.icon}</span>
+            <div class="result-info">
+              <div class="result-title">${item.title}</div>
+              <div class="result-desc">${item.description}</div>
+            </div>
+            <span class="result-category">${item.category}</span>
+          </a>
+        `
+        )
+        .join('');
+    }
+
+    openBtn?.addEventListener('click', openModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    input.addEventListener('input', (e) => {
+      renderResults((e.target as HTMLInputElement).value);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        modal.classList.contains('open') ? closeModal() : openModal();
+      } else if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+
+  initSearchModal();
+  document.addEventListener('astro:after-swap', initSearchModal);
+</script>
+
+<style>
+  .search-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 3rem 1rem 1rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .search-backdrop.open {
+    display: flex;
+  }
+  .search-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 640px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: modalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .search-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+  }
+  .search-header input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    color: var(--text-primary);
+  }
+  .esc-kbd {
+    font-size: 0.75rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.15rem 0.4rem;
+    color: var(--text-muted);
+  }
+  .search-results {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0.5rem;
+  }
+  :global(.result-item) {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background 0.15s ease;
+  }
+  :global(.result-item:hover) {
+    background: var(--bg-hover);
+  }
+  :global(.result-icon) {
+    font-size: 1.25rem;
+  }
+  :global(.result-info) {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  :global(.result-title) {
+    font-weight: 600;
+    font-size: 0.975rem;
+    color: var(--text-primary);
+  }
+  :global(.result-desc) {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  :global(.result-category) {
+    font-size: 0.725rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+  }
+  :global(.no-results) {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-muted);
+  }
+  :global(.no-results span) {
+    font-size: 2rem;
+  }
+</style>

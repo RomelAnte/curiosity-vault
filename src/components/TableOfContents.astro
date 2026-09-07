@@ -1,0 +1,123 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const filteredHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{filteredHeadings.length > 0 && (
+  <nav class="toc-container" aria-label="Tabla de contenidos">
+    <div class="toc-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="8" y1="6" x2="21" y2="6"></line>
+        <line x1="8" y1="12" x2="21" y2="12"></line>
+        <line x1="8" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+      </svg>
+      En esta guía
+    </div>
+    <ul class="toc-list">
+      {filteredHeadings.map((h) => (
+        <li class={`toc-item depth-${h.depth}`}>
+          <a href={`#${h.slug}`} class="toc-link">
+            {h.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc-container {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+  }
+  .toc-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color);
+  }
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .toc-item.depth-3 {
+    padding-left: 0.75rem;
+  }
+  .toc-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    display: block;
+    transition: color 0.15s ease;
+    border-left: 2px solid transparent;
+    padding-left: 0.5rem;
+  }
+  .toc-link:hover,
+  .toc-link.active {
+    color: var(--color-emerald-light);
+    border-left-color: var(--color-emerald);
+  }
+</style>
+
+<script>
+  function initTOC() {
+    const links = document.querySelectorAll<HTMLAnchorElement>('.toc-link');
+    if (!links.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            links.forEach((link) => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-80px 0px -60% 0px' }
+    );
+
+    document.querySelectorAll('article h2, article h3').forEach((heading) => {
+      observer.observe(heading);
+    });
+  }
+
+  initTOC();
+  document.addEventListener('astro:after-swap', initTOC);
+</script>

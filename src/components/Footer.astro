@@ -1,0 +1,157 @@
+---
+const base = import.meta.env.BASE_URL;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand-section">
+      <a class="footer-brand" href={base}>
+        <span>💡</span> Curiosity Vault
+      </a>
+      <p class="footer-description">
+        Biblioteca comunitaria abierta en español. Transformando apuntes personales y curiosidad en conocimiento útil y compartible.
+      </p>
+    </div>
+
+    <div class="footer-links-grid">
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href={`${base}/`}>Inicio</a></li>
+          <li><a href={`${base}/guias/`}>Guías comunitarias</a></li>
+          <li><a href={`${base}/colecciones/`}>Colecciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Comunidad</h4>
+        <ul>
+          <li><a href="https://github.com/RomelAnte/curiosity-vault" target="_blank" rel="noopener noreferrer">Repositorio en GitHub</a></li>
+          <li><a href="https://github.com/RomelAnte/curiosity-vault/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Guía de contribución</a></li>
+          <li><a href="https://github.com/RomelAnte/curiosity-vault/issues/new" target="_blank" rel="noopener noreferrer">Proponer una idea</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Licencia</h4>
+        <p class="license-text">
+          Todo el contenido se comparte bajo la licencia <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Eres libre de compartir y adaptar otorgando crédito.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-container">
+      <span>© {currentYear} Curiosity Vault · Construido de forma abierta</span>
+      <span class="tech-badge">Astro 5 + Vanilla CSS</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    margin-top: 4rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  .footer-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    gap: 3rem;
+  }
+  .footer-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .footer-description {
+    color: var(--text-muted);
+    font-size: 0.925rem;
+    line-height: 1.6;
+    max-width: 32ch;
+  }
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .footer-col h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .footer-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  .footer-col a:hover {
+    color: var(--color-emerald-light);
+  }
+  .license-text {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .license-text a {
+    color: var(--color-emerald-light);
+    text-decoration: underline;
+  }
+  .footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-block: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .footer-bottom-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tech-badge {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.35rem;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 840px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .footer-links-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  }
+</style>

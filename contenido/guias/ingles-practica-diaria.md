@@ -1,3 +1,13 @@
+---
+title: "Aprende inglés con práctica diaria"
+description: "Un plan realista de 1 hora dividida en bloques de escucha, lectura, escritura y conversación para alcanzar nivel fluido."
+category: "Idiomas"
+tags: ["Inglés", "Idiomas", "Aprendizaje", "Rutina"]
+icon: "🗣️"
+updatedAt: "2026-09-07"
+featured: true
+---
+
 # Aprende inglés con práctica diaria
 
 La idea de partir el estudio en bloques cortos es útil porque obliga a practicar varias habilidades, no solo vocabulario. Este plan nace de una nota personal y se adapta a tu nivel y disponibilidad.

@@ -1,0 +1,79 @@
+---
+interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="tag-filter-container">
+  <button class="filter-pill active" data-category="all">
+    Todos
+  </button>
+  {categories.map((cat) => (
+    <button class="filter-pill" data-category={cat}>
+      {cat}
+    </button>
+  ))}
+</div>
+
+<style>
+  .tag-filter-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-block: 1.5rem 2rem;
+  }
+  .filter-pill {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.45rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-pill:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+    border-color: var(--color-emerald-light);
+  }
+  .filter-pill.active {
+    background: var(--color-emerald);
+    color: #ffffff;
+    border-color: var(--color-emerald);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  }
+</style>
+
+<script>
+  function initTagFilter() {
+    const pills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
+    const cards = document.querySelectorAll<HTMLElement>('[data-card-category]');
+
+    if (!pills.length) return;
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const cat = pill.getAttribute('data-category');
+
+        pills.forEach((p) => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute('data-card-category');
+          if (cat === 'all' || cardCat === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  initTagFilter();
+  document.addEventListener('astro:after-swap', initTagFilter);
+</script>

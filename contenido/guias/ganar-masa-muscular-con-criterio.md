@@ -1,3 +1,13 @@
+---
+title: "Ganar masa muscular con criterio"
+description: "Principios de entrenamiento de fuerza, nutrición realista y descanso sostenible basados en evidencias de la ACSM."
+category: "Salud"
+tags: ["Fitness", "Salud", "Entrenamiento", "Nutrición"]
+icon: "💪"
+updatedAt: "2026-09-07"
+featured: false
+---
+
 # Ganar masa muscular con criterio
 
 La nota original propone tres bases útiles: entrenar de forma regular, comer suficiente proteína y dormir. La clave es convertirlas en un plan sostenible y ajustado a la persona, no seguir una cifra fija sin contexto.

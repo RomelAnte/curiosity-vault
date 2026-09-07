@@ -1,3 +1,13 @@
+---
+title: "CV y empleabilidad: demuestra tu valor"
+description: "Estrategias prácticas para destacar en procesos de selección, estructurar un CV impactante y preparar entrevistas sin inflar tu experiencia."
+category: "Empleabilidad"
+tags: ["CV", "Carrera", "Entrevistas", "Empleabilidad"]
+icon: "💼"
+updatedAt: "2026-09-07"
+featured: true
+---
+
 # CV y empleabilidad: demuestra tu valor
 
 Un CV no debe inflar tu experiencia: debe hacer visible lo que sabes hacer y el impacto que ya has tenido.

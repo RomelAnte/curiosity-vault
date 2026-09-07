@@ -1,0 +1,158 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  category: string;
+  tags?: string[];
+  icon?: string;
+  readTime?: string;
+  featured?: boolean;
+}
+
+const {
+  href,
+  title,
+  description,
+  category,
+  tags = [],
+  icon = "💡",
+  readTime = "3 min de lectura",
+  featured = false
+} = Astro.props;
+---
+
+<a href={href} class={`card-item ${featured ? 'card-featured' : ''}`}>
+  <div class="card-header">
+    <span class="card-icon">{icon}</span>
+    <span class="card-category">{category}</span>
+  </div>
+
+  <h3 class="card-title">{title}</h3>
+  <p class="card-description">{description}</p>
+
+  <div class="card-footer">
+    {tags.length > 0 && (
+      <div class="card-tags">
+        {tags.slice(0, 3).map((tag) => (
+          <span class="card-tag">#{tag}</span>
+        ))}
+      </div>
+    )}
+    <span class="card-meta">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      {readTime}
+    </span>
+  </div>
+</a>
+
+<style>
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-emerald), var(--color-teal));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .card-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-emerald-light);
+    box-shadow: 0 12px 24px -10px var(--shadow-color);
+  }
+  .card-item:hover::before {
+    opacity: 1;
+  }
+  .card-featured {
+    background: var(--bg-featured);
+    border-color: var(--border-featured);
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+  }
+  .card-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .card-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+  }
+  .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+  }
+  .card-item:hover .card-title {
+    color: var(--color-emerald-light);
+  }
+  .card-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0 0 1.25rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-color);
+    font-size: 0.775rem;
+    color: var(--text-muted);
+  }
+  .card-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .card-tag {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+  }
+</style>

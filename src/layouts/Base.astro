@@ -1,141 +1,256 @@
 ---
-const { title = "Curiosity Vault" } = Astro.props;
-const base = import.meta.env.BASE_URL;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SearchModal from '../components/SearchModal.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Curiosity Vault · Biblioteca Abierta de Conocimiento",
+  description = "Aprender no debería quedarse perdido. Curiosity Vault convierte curiosidad en conocimiento útil y compartible: guías claras, apuntes reales y fuentes abiertas.",
+  image = "/docs/preview.png"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Una biblioteca abierta de guías, ideas y colecciones."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Prevent FOUC for dark mode -->
+    <script is:inline>
+      const storedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    </script>
   </head>
   <body>
-    <header>
-      <a class="brand" href={base}>Curiosity Vault</a>
-      <nav aria-label="Navegación principal">
-        <a href={`${base}/guias/`}>Guías</a>
-        <a href={`${base}/libros/`}>Libros</a>
-        <a href={`${base}/peliculas/`}>Películas</a>
-      </nav>
-    </header>
-    <main><slot /></main>
-    <footer>
-      Conocimiento en construcción · <a href={`${base}/LICENSE.md`}>CC BY 4.0</a>
-    </footer>
+    <Header />
+    
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <Footer />
+    <SearchModal />
   </body>
 </html>
 
 <style is:global>
   :root {
-    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-    color: #17221b;
-    background: #f7f5ee;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+
+    /* Color Tokens - Light */
+    --bg-page: #FAF9F6;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #F3F4F1;
+    --bg-hover: #F0F4F1;
+    --bg-featured: #F4FAF6;
+    --header-bg: rgba(250, 249, 246, 0.85);
+
+    --border-color: #E2E8F0;
+    --border-featured: #A7F3D0;
+    --shadow-color: rgba(16, 185, 129, 0.08);
+
+    --text-primary: #0F172A;
+    --text-muted: #475569;
+    --text-subtle: #64748B;
+
+    --color-emerald: #059669;
+    --color-emerald-light: #10B981;
+    --color-teal: #0D9488;
+
+    --badge-bg: #E6F4ED;
+    --badge-text: #047857;
   }
+
+  [data-theme="dark"] {
+    /* Color Tokens - Dark */
+    --bg-page: #0B0F17;
+    --bg-surface: #131B2E;
+    --bg-subtle: #1C263B;
+    --bg-hover: #23304A;
+    --bg-featured: #102426;
+    --header-bg: rgba(11, 15, 23, 0.85);
+
+    --border-color: #1F293D;
+    --border-featured: #059669;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+
+    --text-primary: #F8FAFC;
+    --text-muted: #94A3B8;
+    --text-subtle: #64748B;
+
+    --color-emerald: #10B981;
+    --color-emerald-light: #34D399;
+    --color-teal: #14B8A6;
+
+    --badge-bg: rgba(16, 185, 129, 0.15);
+    --badge-text: #34D399;
+  }
+
   * {
     box-sizing: border-box;
-  }
-  body {
     margin: 0;
-    line-height: 1.65;
+    padding: 0;
   }
-  header,
-  main,
-  footer {
-    max-width: 1120px;
-    margin: auto;
-    padding-inline: 1.25rem;
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-  header {
-    min-height: 5rem;
+
+  body {
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
   }
-  .brand {
-    font-weight: 800;
-    font-size: 1.15rem;
-    text-decoration: none;
-    color: #193a2a;
+
+  #main-content {
+    flex-grow: 1;
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
   }
-  nav {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.25;
+    font-weight: 700;
   }
+
   a {
-    color: #0b6242;
+    color: var(--color-emerald-light);
+    transition: color 0.2s ease;
   }
-  nav a {
-    text-decoration: none;
+  a:hover {
+    color: var(--color-emerald);
   }
-  main {
-    padding-block: 3.5rem 5rem;
-  }
-  footer {
-    border-top: 1px solid #d8ddd3;
-    padding-block: 1.5rem;
-    color: #526057;
-    font-size: 0.9rem;
-  }
-  h1 {
-    font-size: clamp(2.3rem, 7vw, 5rem);
-    line-height: 1;
-    letter-spacing: -0.06em;
-    max-width: 14ch;
-  }
-  h2 {
-    margin-top: 2.4rem;
-  }
-  .lede {
-    max-width: 60ch;
-    font-size: 1.2rem;
-    color: #405046;
-  }
-  .grid {
+
+  /* Utility Grid */
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
-  .card {
-    display: block;
-    background: #fffef9;
-    border: 1px solid #d8ddd3;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.15s;
+
+  /* Typography utilities */
+  .page-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
   }
-  .card:hover {
-    transform: translateY(-3px);
-    border-color: #79a98e;
+
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 54ch;
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
-  .card span {
-    color: #5b6d60;
-    font-size: 0.9rem;
-  }
+
+  /* Article markdown styling */
   article {
-    max-width: 760px;
+    line-height: 1.75;
+    font-size: 1.05rem;
+    color: var(--text-primary);
   }
+
   article h1 {
-    max-width: none;
-    font-size: clamp(2.3rem, 6vw, 4.2rem);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 1.5rem;
   }
+
   article h2 {
-    border-top: 1px solid #d8ddd3;
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
   }
+
+  article h3 {
+    font-size: 1.3rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  article p {
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+  }
+
+  article ul, article ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  article li {
+    margin-bottom: 0.5rem;
+  }
+
   article blockquote {
-    border-left: 3px solid #74a68b;
-    margin-left: 0;
-    padding-left: 1rem;
-    color: #405046;
+    border-left: 4px solid var(--color-emerald-light);
+    background: var(--bg-surface);
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1rem 1.25rem;
+    margin-block: 1.5rem;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  article code {
+    font-family: monospace;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+    font-size: 0.9em;
+  }
+
+  article pre {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-block: 1.5rem;
   }
 </style>

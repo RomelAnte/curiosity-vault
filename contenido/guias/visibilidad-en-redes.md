@@ -1,3 +1,13 @@
+---
+title: "Cómo ser visible en redes sociales"
+description: "Diseña un embudo de 5 piezas conectadas (Reel, Carrusel, Historia, WhatsApp y Correo) para atraer, educar y convertir audiencia."
+category: "Marketing"
+tags: ["Redes Sociales", "Marketing", "Contenido", "Ventas"]
+icon: "📱"
+updatedAt: "2026-09-07"
+featured: false
+---
+
 # Cómo ser visible en redes sociales
 
 ## Apuntes de partida

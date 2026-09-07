@@ -29,6 +29,7 @@ corregir, traducir o mejorar una guía?
 - [CV y empleabilidad: demuestra tu valor](contenido/guias/cv-y-empleabilidad.md)
 - [De idea a MVP: construir para aprender](contenido/guias/de-idea-a-mvp.md)
 - [Ganar masa muscular con criterio](contenido/guias/ganar-masa-muscular-con-criterio.md)
+- [Generar ingresos y ampliar contactos](contenido/guias/generar-ingresos-y-contactos.md)
 - [Método para estudiar: de apuntes a práctica](contenido/guias/metodo-para-estudiar.md)
 - [Visibilidad en redes](contenido/guias/visibilidad-en-redes.md)
 - [Dejar la procrastinación](contenido/guias/dejar-la-procrastinacion.md)

@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import Card from "../../components/Card.astro";
+import { getCollection } from "astro:content";
+
+const colecciones = (await getCollection("contenido")).filter((entry) =>
+  entry.id.startsWith("colecciones/"),
+);
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Colecciones Curadas · Curiosity Vault">
+  <div class="header-block">
+    <h1 class="page-title">Colecciones Curadas</h1>
+    <p class="page-subtitle">
+      Listas vivas y selecciones recomendadas sobre libros, películas, herramientas y recursos para seguir explorando.
+    </p>
+  </div>
+
+  <div class="grid-container">
+    {
+      colecciones.map((entry) => {
+        const slug = entry.id.replace("colecciones/", "");
+        return (
+          <Card
+            href={`${base}/${slug}/`}
+            title={entry.data.title}
+            description={entry.data.description}
+            category={entry.data.category}
+            tags={entry.data.tags}
+            icon={entry.data.icon}
+            featured={entry.data.featured}
+          />
+        );
+      })
+    }
+  </div>
+</Base>
+
+<style>
+  .header-block {
+    margin-bottom: 2rem;
+  }
+</style>

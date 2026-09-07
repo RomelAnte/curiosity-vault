@@ -1,3 +1,13 @@
+---
+title: "Películas para ver"
+description: "Una cuidada selección de películas sobre tecnología, crimen, mente, superación y comunicación humana."
+category: "Colecciones"
+tags: ["Películas", "Cine", "Colección", "Cultura"]
+icon: "🎬"
+updatedAt: "2026-09-07"
+featured: false
+---
+
 # Películas para ver
 
 Una selección pequeña, organizada por el tipo de historia que ofrece.

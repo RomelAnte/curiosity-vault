@@ -1,26 +1,264 @@
 ---
 import Base from "../layouts/Base.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import ReadingProgress from "../components/ReadingProgress.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const entries = await getCollection("contenido");
-  return entries
-    .filter(
-      (entry) =>
-        entry.id.startsWith("guias/") || entry.id.startsWith("colecciones/"),
-    )
-    .map((entry) => ({
-      params: { slug: entry.id.split("/").at(-1) },
+  return entries.map((entry) => {
+    const parts = entry.id.split("/");
+    const filename = parts.at(-1) || entry.id;
+    const slug = filename.replace(/\.md$/, "");
+    return {
+      params: { slug },
       props: { entry },
-    }));
+    };
+  });
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+const base = import.meta.env.BASE_URL;
+
+// Calculate estimated reading time (approx 200 words per minute)
+const wordCount = entry.body ? entry.body.split(/\s+/).length : 400;
+const readTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
+
+// Find related entries in the same category
+const allEntries = await getCollection("contenido");
+const related = allEntries
+  .filter((e) => e.id !== entry.id && e.data.category === entry.data.category)
+  .slice(0, 2);
 ---
 
 <Base
-  title={`${entry.id.split("/").at(-1).replaceAll("-", " ")} · Curiosity Vault`}
+  title={`${entry.data.title} · Curiosity Vault`}
+  description={entry.data.description}
 >
-  <article><Content /></article>
+  <ReadingProgress />
+
+  <div class="article-layout">
+    <!-- Article Header -->
+    <header class="article-header">
+      <div class="article-meta-top">
+        <a href={`${base}/guias/`} class="back-link">
+          ← Volver a guías
+        </a>
+        <span class="article-category">
+          {entry.data.icon} {entry.data.category}
+        </span>
+      </div>
+
+      <h1 class="article-title">{entry.data.title}</h1>
+      
+      {entry.data.description && (
+        <p class="article-subtitle">{entry.data.description}</p>
+      )}
+
+      <div class="article-details">
+        <span class="detail-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          {readTimeMinutes} min de lectura
+        </span>
+        {entry.data.updatedAt && (
+          <span class="detail-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Actualizado: {entry.data.updatedAt}
+          </span>
+        )}
+      </div>
+
+      {entry.data.tags && entry.data.tags.length > 0 && (
+        <div class="article-tags">
+          {entry.data.tags.map((tag: string) => (
+            <span class="article-tag">#{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="article-content-wrapper">
+      <!-- Main Content -->
+      <article class="main-article">
+        <Content />
+      </article>
+
+      <!-- Sidebar ToC -->
+      <aside class="article-sidebar">
+        <TableOfContents headings={headings} />
+      </aside>
+    </div>
+
+    <!-- Related Articles -->
+    {related.length > 0 && (
+      <section class="related-section">
+        <h3>También te puede interesar en {entry.data.category}</h3>
+        <div class="related-grid">
+          {related.map((item) => {
+            const itemSlug = item.id.split("/").at(-1)?.replace(/\.md$/, "");
+            return (
+              <a href={`${base}/${itemSlug}/`} class="related-card">
+                <span class="related-icon">{item.data.icon}</span>
+                <div>
+                  <h4>{item.data.title}</h4>
+                  <p>{item.data.description}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+  </div>
 </Base>
+
+<style>
+  .article-layout {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .article-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .article-meta-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .back-link {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  .back-link:hover {
+    color: var(--color-emerald-light);
+  }
+  .article-category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+  }
+  .article-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.85rem;
+  }
+  .article-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .article-details {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-subtle);
+    margin-bottom: 1rem;
+  }
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .article-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .article-tag {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.35rem;
+  }
+  .article-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 3rem;
+    align-items: start;
+  }
+  .main-article {
+    min-width: 0;
+  }
+  .article-sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+  .related-section {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .related-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .related-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+  }
+  .related-card:hover {
+    border-color: var(--color-emerald-light);
+    transform: translateY(-2px);
+  }
+  .related-icon {
+    font-size: 1.5rem;
+  }
+  .related-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+  }
+  .related-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 860px) {
+    .article-content-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .article-sidebar {
+      display: none;
+    }
+  }
+</style>

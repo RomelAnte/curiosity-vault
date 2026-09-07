@@ -1,3 +1,13 @@
+---
+title: "Hábitos, motivación y miedos"
+description: "Reflexiones sobre la eliminación de distracciones, el cuidado del entorno y la exposición gradual para vencer miedos concretos."
+category: "Desarrollo Personal"
+tags: ["Hábitos", "Mentalidad", "Superación", "Desarrollo Personal"]
+icon: "🧠"
+updatedAt: "2026-09-07"
+featured: false
+---
+
 # Hábitos, motivación y miedos
 
 ## Apuntes de partida
