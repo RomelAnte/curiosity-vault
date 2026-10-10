@@ -7,6 +7,7 @@ interface Props {
   tags?: string[];
   icon?: string;
   readTime?: string;
+  wordCount?: number;
   featured?: boolean;
 }
 
@@ -17,7 +18,8 @@ const {
   category,
   tags = [],
   icon = "💡",
-  readTime = "3 min de lectura",
+  wordCount = 400,
+  readTime = `${Math.max(1, Math.ceil(wordCount / 200))} min de lectura`,
   featured = false
 } = Astro.props;
 ---

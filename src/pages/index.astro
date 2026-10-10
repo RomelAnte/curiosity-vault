@@ -24,7 +24,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
     </h1>
 
     <p class="hero-lede">
-      Guías construidas desde apuntes personales, edición transparente e investigación con fuentes abiertas sobre empleabilidad, idiomas, negocios y desarrollo.
+      Guías y colecciones construidas a partir de apuntes personales, con edición transparente y contexto para aprender sobre empleabilidad, idiomas, negocios, tecnología y desarrollo.
     </p>
 
     <div class="hero-actions">
@@ -36,7 +36,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
         </svg>
       </a>
       <a href={`${base}/colecciones/`} class="btn-secondary">
-        Ver Colecciones (Libros y Películas)
+        Ver colecciones
       </a>
     </div>
 
@@ -44,7 +44,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
     <div class="stats-row">
       <div class="stat-item">
         <span class="stat-num">{guias.length}</span>
-        <span class="stat-label">Guías comunitarias</span>
+        <span class="stat-label">Guías abiertas</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
@@ -64,7 +64,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
     <div class="section-header">
       <div>
         <h2 class="section-title">Guías Destacadas</h2>
-        <p class="section-subtitle">Conocimiento curado listo para aplicar</p>
+        <p class="section-subtitle">Ideas organizadas para poner en práctica</p>
       </div>
       <a href={`${base}/guias/`} class="view-all-link">Ver todas ({guias.length}) →</a>
     </div>
@@ -81,6 +81,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
               category={entry.data.category}
               tags={entry.data.tags}
               icon={entry.data.icon}
+              wordCount={entry.body ? entry.body.split(/\s+/).length : 400}
               featured={entry.data.featured}
             />
           );
@@ -116,7 +117,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
       <span class="banner-icon">🤝</span>
       <div>
         <h3>Tu experiencia también puede ayudar</h3>
-        <p>¿Encontraste una técnica que te funcionó? ¿Tienes una fuente mejor? Propon tu propia guía o mejora las existentes de forma abierta en GitHub.</p>
+        <p>¿Probaste una técnica o conoces una fuente útil? Propón una guía o ayuda a mejorar el contenido de forma abierta en GitHub.</p>
       </div>
     </div>
     <a href="https://github.com/RomelAnte/curiosity-vault/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="btn-primary glow">

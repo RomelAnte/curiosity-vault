@@ -11,11 +11,11 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
 const base = import.meta.env.BASE_URL;
 ---
 
-<Base title="Todas las Guías Comunitarias · Curiosity Vault">
+<Base title="Todas las Guías · Curiosity Vault">
   <div class="header-block">
-    <h1 class="page-title">Guías Comunitarias</h1>
+    <h1 class="page-title">Guías</h1>
     <p class="page-subtitle">
-      Cada guía conserva sus apuntes de partida, diferencia con claridad el aporte editorial y propone un ejercicio práctico para aplicar de inmediato.
+      Guías basadas en apuntes personales, editadas para dar contexto y proponer formas concretas de explorar cada tema.
     </p>
   </div>
 
@@ -34,6 +34,7 @@ const base = import.meta.env.BASE_URL;
               category={entry.data.category}
               tags={entry.data.tags}
               icon={entry.data.icon}
+              wordCount={entry.body ? entry.body.split(/\s+/).length : 400}
               featured={entry.data.featured}
             />
           </div>

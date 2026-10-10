@@ -42,8 +42,8 @@ const related = allEntries
     <!-- Article Header -->
     <header class="article-header">
       <div class="article-meta-top">
-        <a href={`${base}/guias/`} class="back-link">
-          ← Volver a guías
+        <a href={`${base}/${entry.id.startsWith("colecciones/") ? "colecciones" : "guias"}/`} class="back-link">
+          ← Volver a {entry.id.startsWith("colecciones/") ? "colecciones" : "guías"}
         </a>
         <span class="article-category">
           {entry.data.icon} {entry.data.category}

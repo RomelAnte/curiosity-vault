@@ -1,10 +1,10 @@
----
+﻿---
 title: "Método para estudiar: de apuntes a práctica"
 description: "Pasa de la relectura pasiva al recuerdo activo, la autoexplicación y la práctica distribuida respaldada por la psicología educativa."
 category: "Tecnología y curiosidades"
 tags: ["Estudio", "Aprendizaje", "Productividad", "Memoria"]
 icon: "📚"
-updatedAt: "2026-09-07"
+updatedAt: "2026-10-10"
 featured: true
 ---
 
@@ -23,12 +23,20 @@ Esta guía parte íntegramente de la nota local **“## Método para estudiar.tx
 
 ### Hábitos para ser inteligente
 
-- Tomar mucha agua.
+- Cuidar la hidratación según la sed y las circunstancias personales.
 - Ejercitar la mente.
 - Leer.
 - Bookster.
 - Paseos al aire libre.
 - Rodearse de gente de la que se puede aprender.
+
+### Dificultades y métodos anotados
+
+- Para memorizar, el apunte propone explorar el método Feynman: explicar una idea con lenguaje sencillo y detectar qué parte no se entiende aún.
+- Para ordenar apuntes, propone el método Cornell.
+- Para comprensión lectora, propone SQ3R: revisar, preguntar, leer, recitar y repasar.
+- Para recordar antes de un examen, propone *blurting*: escribir lo que se recuerda y luego compararlo con el material.
+- La nota asocia la dificultad para respirar con Pomodoro, pero no es una técnica respiratoria. Pomodoro organiza el tiempo de trabajo y descanso; ante dificultades para respirar, no uses un temporizador como sustituto de ayuda médica.
 
 ## Cómo convertir el apunte en una sesión de estudio
 
@@ -46,6 +54,8 @@ Tomar agua, pasear, leer y aprender de otras personas puede apoyar el bienestar 
 
 La mención a **Bookster** se mantiene porque aparece en el apunte original; antes de recomendarla a la comunidad conviene aclarar qué recurso o aplicación específica se quiere referenciar.
 
+Los métodos Feynman, Cornell, SQ3R y *blurting* son estructuras de práctica posibles, no soluciones garantizadas. Elige el que responda a tu dificultad concreta y comprueba el aprendizaje con preguntas o ejercicios.
+
 ## Prueba de una semana
 
 Elige un tema y realiza tres sesiones de 25 minutos durante la semana. En cada sesión escribe tres preguntas y respóndelas sin mirar los apuntes. Al final, explica el tema en dos minutos y registra qué parte necesitas estudiar de nuevo.
@@ -55,3 +65,4 @@ Elige un tema y realiza tres sesiones de 25 minutos durante la semana. En cada s
 - **Punto de partida:** apunte personal local “## Método para estudiar.txt”.
 - **Aporte editorial:** organización, precisión del lenguaje y propuesta de práctica.
 - **Evidencia consultada:** [Association for Psychological Science: técnicas de aprendizaje eficaces](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html/comment-page-1).
+

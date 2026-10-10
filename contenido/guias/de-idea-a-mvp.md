@@ -4,7 +4,7 @@ description: "Cómo validar hipótesis, estructurar un producto mínimo viable y
 category: "Problemas de la vida real → ideas de proyectos"
 tags: ["MVP", "Lean Startup", "Emprendimiento", "Proyectos"]
 icon: "🚀"
-updatedAt: "2026-09-07"
+updatedAt: "2026-10-10"
 featured: true
 ---
 
@@ -19,7 +19,7 @@ Una idea no necesita estar terminada para ponerse a prueba. Un MVP sirve para ap
 - Documento de proyecto: descripción (nombre, objetivo, propósito y fechas), alcance y tecnologías.
 - Partes interesadas: cliente, proveedores, usuario y equipo de desarrollo.
 - Cronograma con reuniones y *sprints*; roles del equipo; páginas, enrutamiento, funcionalidades, especificación de funciones, riesgos y mitigación.
-- Como profesional: facturas a crédito.
+- Como profesional: entender cómo gestionar las facturas emitidas a crédito.
 
 ## El ciclo
 
@@ -36,6 +36,10 @@ Una idea no necesita estar terminada para ponerse a prueba. Un MVP sirve para ap
 - Funcionalidades priorizadas, páginas y navegación.
 - Cronograma corto con reuniones y sprints.
 - Riesgos y una posible respuesta para cada uno.
+
+## Operación profesional
+
+Si el proyecto implica facturar a crédito, define condiciones por escrito y comprende plazos, cobro y flujo de caja antes de comprometer gastos. Los requisitos fiscales y de facturación dependen del país; compruébalos con fuentes oficiales o asesoría local.
 
 Lean Startup define este ciclo como construir una experiencia suficiente para obtener información, medir la reacción de clientes y usar los resultados para orientar el siguiente experimento. [Principios de Lean Startup](https://leanstartup.co/about/principles/)
 

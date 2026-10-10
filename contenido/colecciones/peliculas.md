@@ -1,10 +1,10 @@
----
+﻿---
 title: "Películas para ver"
-description: "Una cuidada selección de películas sobre tecnología, crimen, mente, superación y comunicación humana."
+description: "Una lista personal de películas sobre tecnología, crimen, mente, superación y comunicación humana."
 category: "Tecnología y curiosidades"
 tags: ["Películas", "Cine", "Colección", "Cultura"]
 icon: "🎬"
-updatedAt: "2026-09-07"
+updatedAt: "2026-10-10"
 featured: false
 ---
 
@@ -14,7 +14,7 @@ Una selección pequeña, organizada por el tipo de historia que ofrece.
 
 ## Tecnología, ambición y crimen
 
-- *Hacker: todo crimen tiene un inicio*
+- *Hacker: todo crimen tiene un inicio* (título del apunte; confirmar distribución)
 - *La red social*
 
 ## Mente, comunicación y superación
@@ -26,3 +26,4 @@ Una selección pequeña, organizada por el tipo de historia que ofrece.
 ## Próximo paso
 
 Elige una película y anota una idea, una pregunta o una escena que quieras recordar.
+

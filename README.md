@@ -2,7 +2,7 @@
 
 ![Vista previa de Curiosity Vault](./docs/preview.png)
 
-Una plataforma web de aprendizaje y biblioteca comunitaria de conocimiento (*Digital Garden*) desarrollada con **Astro 5**, diseñada para convertir la curiosidad en guías prácticas, transparentes y aplicables en español.
+Una plataforma web de aprendizaje y biblioteca abierta a la comunidad (*Digital Garden*) desarrollada con **Astro 7**, diseñada para convertir la curiosidad en guías prácticas, transparentes y aplicables en español.
 
 ---
 
@@ -17,7 +17,7 @@ Construir una biblioteca digital abierta, veloz y accesible sobre aprendizaje, e
 ---
 
 ## 🛠️ 3. Stack
-- **Framework Web**: Astro 5 (Static Site Generation - SSG)
+- **Framework Web**: Astro 7 (Static Site Generation - SSG)
 - **Lenguaje**: TypeScript / JavaScript (ESM)
 - **Formato de Contenido**: Markdown (.md) con Astro Content Collections
 - **Componentes UI**: Componentes Astro nativos (Buscador, Selector de Tema, Progreso de Lectura, Tabla de Contenidos)
@@ -58,19 +58,23 @@ curiosity-vault/
 
 ---
 
+## 📚 Guías publicadas
+
+El sitio contiene actualmente 15 guías prácticas: [CV y empleabilidad](contenido/guias/cv-y-empleabilidad.md), [De idea a MVP](contenido/guias/de-idea-a-mvp.md), [Dejar la procrastinación](contenido/guias/dejar-la-procrastinacion.md), [Energía y descanso](contenido/guias/energia-y-descanso.md), [Finanzas personales](contenido/guias/finanzas-personales.md), [Ganar masa muscular](contenido/guias/ganar-masa-muscular-con-criterio.md), [Generar ingresos y ampliar contactos](contenido/guias/generar-ingresos-y-contactos.md), [Hábitos y miedos](contenido/guias/habitos-y-miedos.md), [Hablar en público](contenido/guias/hablar-en-publico.md), [Aprender inglés](contenido/guias/aprender-ingles.md), [Inglés con práctica diaria](contenido/guias/ingles-practica-diaria.md), [Mentalidad y crecimiento](contenido/guias/mentalidad-y-crecimiento.md), [Método para estudiar](contenido/guias/metodo-para-estudiar.md), [Negocio y ventas](contenido/guias/negocio-y-ventas.md) y [Visibilidad en redes](contenido/guias/visibilidad-en-redes.md).
+
 ## ⚙️ 5. Funcionalidades
-- 📚 **Catálogo de Guías Prácticas**: Artículos estructurados sobre técnicas de estudio, práctica diaria de inglés, creación de MVP, hábitos, oratoria y empleabilidad.
+- 📚 **Catálogo de Guías Prácticas**: 15 guías sobre finanzas, negocio, estudio, idiomas, empleabilidad, hábitos, salud, proyectos, oratoria y redes sociales.
 - 🔍 **Modal de Búsqueda (Search Modal)**: Búsqueda interactiva rápida para encontrar guías y recursos de forma inmediata.
 - 🌓 **Modo Oscuro / Claro (Theme Toggle)**: Adaptación de tema visual con detección automática del sistema y cambio manual.
 - 📖 **Barra de Progreso de Lectura**: Indicador visual que muestra el avance al desplazarse por cada artículo.
 - 📑 **Tabla de Contenidos Dinámica**: Generación automática de índices de lectura según los encabezados de cada guía.
 - 🏷️ **Filtrado por Etiquetas**: Clasificación de artículos por temas clave para facilitar la exploración.
-- 🤝 **Código y Contenido Abierto**: Espacio listo para aportes de la comunidad con guías de contribución ([`CONTRIBUTING.md`](CONTRIBUTING.md) y [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)).
+- 🤝 **Código y Contenido Abierto**: Proyecto abierto a aportes; consulta [`CONTRIBUTING.md`](CONTRIBUTING.md) y [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
 
 ---
 
 ## 📊 6. Estado Actual
-🟢 **Funcional / Activo (v1.0.0)**: Proyecto maquetado y desplegado con más de 10 guías publicadas, arquitectura SSG veloz y optimizada para buscadores (SEO).
+🟢 **Funcional / Activo**: El sitio contiene 15 guías y 5 colecciones, publicadas como páginas estáticas con Astro.
 
 ---
 
@@ -118,7 +122,7 @@ curiosity-vault/
 
 ## 🗺️ 9. Roadmap
 - [ ] Implementación de buscador con motor a pantalla completa (Pagefind / FlexSearch).
-- [ ] Módulo de tiempo estimado de lectura en cada artículo.
+- [x] Tiempo estimado de lectura en cada tarjeta y artículo (200 palabras por minuto).
 - [ ] Soporte para guías interactivas en formato MDX.
 - [ ] Feed RSS automático para suscripción de lectores.
 - [ ] Sistema estático de retroalimentación y reacciones por guía.

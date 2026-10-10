@@ -1,10 +1,10 @@
----
+﻿---
 title: "Aprende inglés con práctica diaria"
-description: "Un plan realista de 1 hora dividida en bloques de escucha, lectura, escritura y conversación para alcanzar nivel fluido."
+description: "Una rutina adaptable de escucha, lectura, escritura y conversación para practicar inglés de forma constante."
 category: "Tecnología y curiosidades"
 tags: ["Inglés", "Idiomas", "Aprendizaje", "Rutina"]
 icon: "🗣️"
-updatedAt: "2026-09-07"
+updatedAt: "2026-10-10"
 featured: true
 ---
 
@@ -20,6 +20,9 @@ La idea de partir el estudio en bloques cortos es útil porque obliga a practica
 - Escuchar *Big Questions* y tomar apuntes.
 - Explorar Soy Miguel Idiomas, La Teacher Tiffany, FreeCodeCamp, Inglés de Cambridge, inglés técnico de Cisco y Desafío Latam.
 - Certificación: EF SET.
+- Leer antes de dormir si ayuda a mantener una práctica tranquila; elegir un texto comprensible.
+- Practicar pronunciación y expresión hablando a solas, conversando o cantando si resulta cómodo.
+- La regla de Pareto puede servir como orientación para priorizar vocabulario frecuente y relevante, no como una proporción fija de aprendizaje.
 
 ## Una hora posible
 
@@ -34,9 +37,13 @@ La idea de partir el estudio en bloques cortos es útil porque obliga a practica
 - Usa repetición espaciada, por ejemplo con Anki, para el vocabulario que necesitas recordar.
 - Empieza con material de tu nivel; comprender la idea principal importa más que entender cada palabra.
 - Describe tu día, tus planes o una opinión sencilla en inglés para convertir el conocimiento pasivo en uso real.
+- Combina práctica de vocabulario, pronunciación, gramática y escritura según tu nivel; no hace falta abordar todo en cada sesión.
 
 El British Council organiza práctica gratuita por habilidad y nivel, con actividades de escucha, lectura, escritura y conversación. [LearnEnglish](https://learnenglish.britishcouncil.org/) también recomienda practicar de forma regular hablando y escribiendo sobre temas significativos para ti. [Guía para llegar a B1](https://learnenglish.britishcouncil.org/english-levels/improve-your-english-level/how-get-your-english-b1-level)
 
 ## Reto de siete días
 
 Mantén la rutina durante una semana. Al final, identifica la habilidad que más te cuesta y dedica la siguiente semana a reforzarla.
+
+La nota también menciona «Domina la gramática inglesa», «Domina el vocabulario inglés» y «Workbook de inglés completo», pero no indica autor ni edición. Confirma cuáles son antes de recomendarlos como recursos concretos.
+
