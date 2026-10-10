@@ -1,44 +1,44 @@
 # Contribuir a Curiosity Vault
 
-Gracias por el interés en aportar. Curiosity Vault es una biblioteca abierta de guías, ideas y colecciones para aprender, mejorar la empleabilidad, crear proyectos y desarrollar hábitos. Nació de apuntes personales y crece con lo que la comunidad aporta.
+Gracias por tu interés en mejorar Curiosity Vault. El proyecto reúne guías prácticas y colecciones abiertas sobre aprendizaje, empleabilidad, proyectos, hábitos, salud y tecnología. El contenido actual se organiza en guías individuales y colecciones temáticas para mantener juntas las notas que tratan del mismo tema.
 
-Antes de empezar, dos principios que guían todo el contenido del proyecto:
+## Formas de contribuir
 
-- No se presentan consejos personales como verdades universales. Si una guía refleja una opinión o experiencia propia, se dice así.
-- Los temas de salud, empleo o bienestar llevan una advertencia clara de que no sustituyen el criterio de un profesional.
+- **Mejorar contenido:** proponer correcciones, aclaraciones, fuentes o ejemplos en los archivos Markdown de `contenido/`.
+- **Añadir una guía o colección:** sugerir un tema que no esté ya cubierto. Si hay varias notas o ideas grandes sobre un tema, considera agruparlas en una colección o proponer títulos con una idea central cada uno.
+- **Corregir referencias:** identificar enlaces rotos, datos desactualizados, títulos incompletos o recursos que necesiten contexto.
+- **Traducir:** proponer una traducción de una guía o colección existente.
+- **Mejorar el sitio:** corregir errores o proponer cambios de accesibilidad, funcionalidad o rendimiento. Describe claramente el efecto esperado si el cambio altera la presentación.
 
-## Formas de aportar
+## Principios editoriales
 
-Puedes contribuir en cualquiera de estas líneas:
+- Distingue las ideas de apuntes personales, la información respaldada por fuentes y las reflexiones u opiniones editoriales.
+- No presentes una experiencia personal, una frase popular ni una recomendación como hecho universal.
+- Para afirmaciones factuales importantes, aporta fuentes fiables y enlaza la página o estudio que las respalda. Prioriza fuentes originales, organizaciones profesionales, universidades, instituciones oficiales y estudios revisados por pares.
+- Si una afirmación no puede comprobarse, indícala como **sin verificar** o déjala como una pregunta; no la completes por conjetura. Si las fuentes discrepan, explica la diferencia.
+- No prometas resultados de salud, finanzas, empleo o negocio. El contenido de salud no sustituye la evaluación de un profesional; las decisiones financieras no son asesoría personalizada.
+- Trata a las personas con respeto y protege su privacidad. No añadas datos personales sin autorización.
+- Conserva los créditos y la procedencia de los apuntes o materiales. Los archivos `.txt` locales son fuentes privadas: no los añadas a un commit ni los publiques.
 
-- **Guías nuevas** — una guía completa sobre un tema que encaje con el espíritu del proyecto (aprender, empleabilidad, proyectos, hábitos).
-- **Traducciones** — llevar una guía existente a otro idioma.
-- **Correcciones** — errores, typos, enlaces rotos, datos desactualizados.
-- **Código del sitio** — mejoras de diseño, funcionalidad o rendimiento en el sitio Astro.
+## Elegir entre guía y colección
 
-## Antes de escribir código o una guía completa
+Una **guía** desarrolla una idea central con contexto y pasos aplicables. Una **colección** reúne apuntes, recursos o varias piezas relacionadas que conviene consultar juntas. Antes de crear un documento, busca en `contenido/guias/` y `contenido/colecciones/` para evitar duplicar un tema. Si una propuesta mezcla varias ideas centrales, explica primero cómo las separarías; no publiques esa división hasta acordar el alcance en la conversación o issue.
 
-Abre primero un issue usando la plantilla correspondiente (nueva guía, traducción, corrección o mejora). Esto evita trabajo duplicado y permite alinear el enfoque antes de que inviertas tiempo escribiendo o programando.
+## Flujo recomendado
 
-Toda guía nueva pasa por revisión y aprobación antes de fusionarse — el issue es el punto de partida para esa conversación, no un trámite.
+1. Busca si el tema o recurso ya aparece en `contenido/` y revisa las convenciones de los documentos cercanos.
+2. Para un tema nuevo, una separación de contenido o un cambio amplio, abre un issue con el objetivo y, cuando aplique, la propuesta de títulos y alcance.
+3. Trabaja en una rama descriptiva, por ejemplo `contenido/actualizar-empleo`, `fix/enlace-roto` o `i18n/traducir-guia`.
+4. Edita únicamente los archivos necesarios. Conserva el formato Markdown y actualiza la fecha editorial del documento cuando corresponda.
+5. Comprueba los enlaces y ejecuta `npm run build` si cambias contenido o código del sitio.
+6. Abre un pull request enlazando el issue y resume qué cambiaste, por qué, las fuentes utilizadas y las comprobaciones realizadas.
 
-## Flujo para enviar un cambio
-
-1. Haz fork del repositorio y crea una rama descriptiva (`guia/hablar-en-publico-parte-2`, `fix/enlace-licencia`, `i18n/en-cv-empleabilidad`).
-2. Trabaja tus cambios. Si es contenido, sigue la estructura de una guía existente en `contenido/guias/` como referencia.
-3. Abre un pull request enlazando el issue relacionado y describiendo qué cambia y por qué.
-4. Espera la revisión. Es normal recibir comentarios o pedidos de ajuste antes de fusionar.
-
-## Sobre el contenido
-
-- Todo el contenido publicado vive en Markdown dentro de `contenido/`. No se publican apuntes o archivos privados.
-- Si una guía se basa en una fuente externa (un video, un artículo, un dato concreto), cita esa fuente de forma verificable.
-- Escribe para que cualquier persona entienda el tema sin conocimiento previo, sin perder precisión.
+Toda contribución se revisa antes de integrarse. Abrir un issue ayuda a acordar el alcance de cambios grandes y a evitar trabajo duplicado.
 
 ## Licencia
 
-Todo el contenido se publica bajo licencia CC BY 4.0 (ver `LICENSE.md`). Al contribuir, aceptas que tu aporte se publique bajo esa misma licencia.
+El contenido se publica bajo la licencia CC BY 4.0 (consulta `LICENSE.md`). Al enviar una contribución, confirmas que tienes derecho a compartirla bajo esa licencia y que atribuyes las fuentes cuando sea necesario.
 
 ## ¿Dudas?
 
-Abre un issue con tu pregunta o revisa los issues ya abiertos — es probable que alguien ya haya preguntado algo parecido.
+Abre un issue para preguntar por el alcance, la estructura, las fuentes o el proceso de contribución.
