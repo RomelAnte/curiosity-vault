@@ -1,4 +1,4 @@
----
+﻿---
 import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
@@ -16,7 +16,7 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
   <section class="hero-section">
     <div class="hero-badge">
       <span class="pulse-dot"></span>
-      Biblioteca ABIERTA Y COMUNITARIA
+      Biblioteca ABIERTA A LA COMUNIDAD
     </div>
 
     <h1 class="hero-title">
@@ -355,3 +355,4 @@ const categories = [...new Set(guias.map((g) => g.data.category))];
     }
   }
 </style>
+

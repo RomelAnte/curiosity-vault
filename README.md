@@ -1,4 +1,4 @@
-# 🧠 Curiosity Vault
+﻿# 🧠 Curiosity Vault
 
 ![Vista previa de Curiosity Vault](./docs/preview.png)
 
@@ -12,7 +12,7 @@ El aprendizaje diario suele quedarse disperso entre notas olvidadas, videos guar
 ---
 
 ## 🎯 2. Objetivo
-Construir una biblioteca digital abierta, veloz y accesible sobre aprendizaje, empleabilidad, desarrollo de proyectos, hábitos, salud y tecnología. Curiosity Vault transforma apuntes y reflexiones en guías claras con fuentes transparentes y licencias libres (CC BY 4.0) para que cualquier persona pueda aprender y contribuir.
+Construir una biblioteca abierta a la comunidad, veloz y accesible sobre aprendizaje, empleabilidad, desarrollo de proyectos, hábitos, salud y tecnología. Curiosity Vault transforma apuntes y reflexiones en guías claras con fuentes transparentes y licencias libres (CC BY 4.0) para que cualquier persona pueda aprender y contribuir.
 
 ---
 
@@ -60,10 +60,10 @@ curiosity-vault/
 
 ## 📚 Guías publicadas
 
-El sitio contiene actualmente 15 guías prácticas: [CV y empleabilidad](contenido/guias/cv-y-empleabilidad.md), [De idea a MVP](contenido/guias/de-idea-a-mvp.md), [Dejar la procrastinación](contenido/guias/dejar-la-procrastinacion.md), [Energía y descanso](contenido/guias/energia-y-descanso.md), [Finanzas personales](contenido/guias/finanzas-personales.md), [Ganar masa muscular](contenido/guias/ganar-masa-muscular-con-criterio.md), [Generar ingresos y ampliar contactos](contenido/guias/generar-ingresos-y-contactos.md), [Hábitos y miedos](contenido/guias/habitos-y-miedos.md), [Hablar en público](contenido/guias/hablar-en-publico.md), [Aprender inglés](contenido/guias/aprender-ingles.md), [Inglés con práctica diaria](contenido/guias/ingles-practica-diaria.md), [Mentalidad y crecimiento](contenido/guias/mentalidad-y-crecimiento.md), [Método para estudiar](contenido/guias/metodo-para-estudiar.md), [Negocio y ventas](contenido/guias/negocio-y-ventas.md) y [Visibilidad en redes](contenido/guias/visibilidad-en-redes.md).
+El sitio contiene actualmente 6 guías prácticas: [De idea a MVP](contenido/guias/de-idea-a-mvp.md), [Energía y descanso](contenido/guias/energia-y-descanso.md), [Finanzas personales](contenido/guias/finanzas-personales.md), [Ganar masa muscular](contenido/guias/ganar-masa-muscular-con-criterio.md), [Hablar en público](contenido/guias/hablar-en-publico.md) y [Método para estudiar](contenido/guias/metodo-para-estudiar.md). Los temas con varias notas relacionadas se consolidaron en 9 colecciones, entre ellas [Empleo](contenido/colecciones/empleo.md), [Desarrollo personal](contenido/colecciones/desarrollo-personal.md), [Negocio y marketing](contenido/colecciones/negocio-y-marketing.md) e [Inglés: práctica y recursos](contenido/colecciones/ingles.md).
 
 ## ⚙️ 5. Funcionalidades
-- 📚 **Catálogo de Guías Prácticas**: 15 guías sobre finanzas, negocio, estudio, idiomas, empleabilidad, hábitos, salud, proyectos, oratoria y redes sociales.
+- 📚 **Catálogo de Guías Prácticas**: 6 guías individuales y 9 colecciones para reunir apuntes relacionados sobre empleabilidad, negocio, desarrollo personal, idiomas y recursos.
 - 🔍 **Modal de Búsqueda (Search Modal)**: Búsqueda interactiva rápida para encontrar guías y recursos de forma inmediata.
 - 🌓 **Modo Oscuro / Claro (Theme Toggle)**: Adaptación de tema visual con detección automática del sistema y cambio manual.
 - 📖 **Barra de Progreso de Lectura**: Indicador visual que muestra el avance al desplazarse por cada artículo.
@@ -74,7 +74,7 @@ El sitio contiene actualmente 15 guías prácticas: [CV y empleabilidad](conteni
 ---
 
 ## 📊 6. Estado Actual
-🟢 **Funcional / Activo**: El sitio contiene 15 guías y 5 colecciones, publicadas como páginas estáticas con Astro.
+🟢 **Funcional / Activo**: El sitio contiene 6 guías y 9 colecciones, publicadas como páginas estáticas con Astro.
 
 ---
 
@@ -126,3 +126,5 @@ El sitio contiene actualmente 15 guías prácticas: [CV y empleabilidad](conteni
 - [ ] Soporte para guías interactivas en formato MDX.
 - [ ] Feed RSS automático para suscripción de lectores.
 - [ ] Sistema estático de retroalimentación y reacciones por guía.
+
+
