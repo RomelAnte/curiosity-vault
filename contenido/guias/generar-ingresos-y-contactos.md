@@ -1,7 +1,7 @@
 ---
 title: "Generar ingresos y ampliar contactos"
 description: "Monetización con tráfico de red, pensamiento centrado en el cliente, generación de confianza y redes de contactos mediante personas de servicio."
-category: "Negocios"
+category: "Dinero y negocios"
 tags: ["Negocios", "Networking", "Afiliados", "Ventas", "Empatía"]
 icon: "🤝"
 updatedAt: "2026-09-07"

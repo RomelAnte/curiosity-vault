@@ -1,7 +1,7 @@
 ---
 title: "Películas para ver"
 description: "Una cuidada selección de películas sobre tecnología, crimen, mente, superación y comunicación humana."
-category: "Colecciones"
+category: "Tecnología y curiosidades"
 tags: ["Películas", "Cine", "Colección", "Cultura"]
 icon: "🎬"
 updatedAt: "2026-09-07"

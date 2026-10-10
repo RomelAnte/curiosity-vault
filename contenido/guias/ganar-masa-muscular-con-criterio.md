@@ -1,7 +1,7 @@
 ---
 title: "Ganar masa muscular con criterio"
 description: "Principios de entrenamiento de fuerza, nutrición realista y descanso sostenible basados en evidencias de la ACSM."
-category: "Salud"
+category: "Salud y estilo de vida"
 tags: ["Fitness", "Salud", "Entrenamiento", "Nutrición"]
 icon: "💪"
 updatedAt: "2026-09-07"

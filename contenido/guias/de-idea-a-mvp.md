@@ -1,7 +1,7 @@
 ---
 title: "De idea a MVP: construir para aprender"
 description: "Cómo validar hipótesis, estructurar un producto mínimo viable y aplicar los principios de Lean Startup sin malgastar recursos."
-category: "Proyectos"
+category: "Problemas de la vida real → ideas de proyectos"
 tags: ["MVP", "Lean Startup", "Emprendimiento", "Proyectos"]
 icon: "🚀"
 updatedAt: "2026-09-07"

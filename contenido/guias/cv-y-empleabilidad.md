@@ -1,7 +1,7 @@
 ---
 title: "CV y empleabilidad: demuestra tu valor"
 description: "Estrategias prácticas para destacar en procesos de selección, estructurar un CV impactante y preparar entrevistas sin inflar tu experiencia."
-category: "Empleabilidad"
+category: "Dinero y negocios"
 tags: ["CV", "Carrera", "Entrevistas", "Empleabilidad"]
 icon: "💼"
 updatedAt: "2026-09-07"

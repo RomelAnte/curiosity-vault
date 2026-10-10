@@ -1,7 +1,7 @@
 ---
 title: "Aprende inglés con práctica diaria"
 description: "Un plan realista de 1 hora dividida en bloques de escucha, lectura, escritura y conversación para alcanzar nivel fluido."
-category: "Idiomas"
+category: "Tecnología y curiosidades"
 tags: ["Inglés", "Idiomas", "Aprendizaje", "Rutina"]
 icon: "🗣️"
 updatedAt: "2026-09-07"

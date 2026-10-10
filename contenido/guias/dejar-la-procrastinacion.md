@@ -1,7 +1,7 @@
 ---
 title: "Dejar la procrastinación: microacciones y foco"
 description: "Estrategias prácticas para simplificar tu entorno, crear microhábitos de menos de 5 minutos y vencer la parálisis de inicio."
-category: "Productividad"
+category: "Salud y estilo de vida"
 tags: ["Productividad", "Hábitos", "Enfoque", "Procrastinación"]
 icon: "⚡"
 updatedAt: "2026-09-07"

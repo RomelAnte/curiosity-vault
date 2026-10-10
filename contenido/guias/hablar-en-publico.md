@@ -1,7 +1,7 @@
 ---
 title: "Técnicas para hablar en público"
 description: "Ejercicios de articulación, diafragma, modulación y una secuencia de práctica en 3 niveles para comunicar con soltura."
-category: "Comunicación"
+category: "Relaciones y comunicación"
 tags: ["Oratoria", "Comunicación", "Confianza", "Vocalización"]
 icon: "🎤"
 updatedAt: "2026-09-07"

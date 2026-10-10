@@ -1,7 +1,7 @@
 ---
 title: "Libros para explorar"
 description: "Una biblioteca comunitaria sobre programación, literatura ecuatoriana, hábitos, desarrollo personal y mentalidad."
-category: "Colecciones"
+category: "Tecnología y curiosidades"
 tags: ["Libros", "Lectura", "Colección", "Biblioteca"]
 icon: "📖"
 updatedAt: "2026-09-07"
